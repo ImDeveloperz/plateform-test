@@ -1,0 +1,63 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model City {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String   @unique
+  createdAt DateTime @default(now())
+  responses Response[]
+}
+
+model Response {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  fullName  String
+  position  String
+  company   String?
+  objective String
+  cityId    String   @db.ObjectId
+  city      City     @relation(fields: [cityId], references: [id])
+  
+  // English answers
+  q1        String
+  q2        String
+  q3        String
+  q4        String
+  q5        String
+  q6        String
+  q7        String
+  q8        String
+  q9        String
+  q10       String
+  q11       String
+  
+  // Logic answers
+  q12       String
+  q13       String
+  q14       String
+  q15       String
+  q16       String
+  q17       String
+  q18       String
+  q19       String
+  q20       String
+  q21       String
+  
+  // Scores
+  englishScore    Int
+  englishLevel    String
+  englishPercent  Int
+  logicScore      Int
+  logicLevel      String
+  logicPercent    Int
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
