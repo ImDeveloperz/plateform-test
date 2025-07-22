@@ -21,7 +21,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
             <BookOpen className="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Test d'Anglais</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Test d&apos;Anglais</h3>
             <p className="text-gray-600">11 questions pour évaluer votre niveau selon le CECR (A1, A2, B1)</p>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-8 text-center">
@@ -61,7 +61,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Niveaux d'évaluation</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Niveaux d&apos;évaluation</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium text-gray-900 mb-2">Anglais (CECR)</h4>

@@ -151,7 +151,7 @@ export default function LoginForm() {
           <p className="text-xs text-gray-500">
             En vous connectant, vous acceptez nos{' '}
             <a href="#" className="text-purple-600 hover:text-purple-800 transition-colors">
-              conditions d'utilisation
+              conditions d&apos;utilisation
             </a>{' '}
             et notre{' '}
             <a href="#" className="text-purple-600 hover:text-purple-800 transition-colors">
