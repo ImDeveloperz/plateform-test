@@ -15,7 +15,10 @@ export async function middleware(req) {
 
   // If accessing protected route without authentication
   if (isProtected && !isAuth) {
-    return NextResponse.redirect(new URL("/login", req.url));
+    // Redirect to login page
+    const loginUrl = new URL("/login", req.url);
+    loginUrl.searchParams.set("callbackUrl", req.nextUrl.pathname);
+    return NextResponse.redirect(loginUrl);
   }
 
   return NextResponse.next();

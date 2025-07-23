@@ -22,9 +22,10 @@ export default function LoginForm() {
       const res = await signIn('credentials', {
         email,
         password,
-        redirect: false,
+        redirect: true,
+        callbackUrl: '/recruiter/results',
       })
-
+      
       if (res?.ok) {
         router.push('/recruiter/results')
       } else {
