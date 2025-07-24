@@ -58,27 +58,23 @@ export default function LoginForm() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center px-4 py-8">
+      
       <div className="max-w-md w-full space-y-8 mx-6">
         {/* Home Button */}
-        <div className="flex justify-start mb-4">
-          <button
-            onClick={handleGoHome}
-            className="group inline-flex items-center px-5 py-3 text-sm font-semibold text-gray-700 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 hover:bg-white hover:text-purple-700 hover:border-purple-200 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-          >
-            <Home className="h-5 w-5 mr-3 group-hover:text-purple-600 transition-colors duration-300" />
-            Retour à l'accueil
-          </button>
-        </div>
+        
 
         {/* Header */}
         <div className="text-center">
-          <div className="flex justify-center mb-6">
+          <div className="flex cursor-pointer justify-center mb-6">
             <Image
               src="/logo.png"
               alt="Web4jobs Logo"
               width={100}
               height={100}
               className="object-cover"
+              onClick={()=>{
+                handleGoHome()
+              }}
             />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
