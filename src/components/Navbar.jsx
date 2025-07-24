@@ -38,13 +38,13 @@ export default function Navbar() {
               onClick={handleLogout}
               className="flex items-center gap-2 px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
             >
-              <LogOut className="h-4 w-4" />
+              <LogOut className="h-4 w-4 cursor-pointer" />
               Logout
             </button>
           ) : (
             // Not logged in - show Login
             <Link href="/login">
-              <button className="flex items-center gap-2 px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+              <button className="flex items-center gap-2 px-4 py-2 text-gray-700 border cursor-pointer border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
                 <User className="h-4 w-4" />
                 Login
               </button>
